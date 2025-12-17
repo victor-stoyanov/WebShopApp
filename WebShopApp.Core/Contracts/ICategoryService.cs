@@ -8,7 +8,7 @@ using WebShopApp.Infrastructure_.Data.Entities;
 
 namespace WebShopApp.Infrastructure.Contracts
 {
-    internal interface ICategoryService
+    public interface ICategoryService
     {
         List<Category> GetCategories();
         Category GetCategoryById(int categoryId);

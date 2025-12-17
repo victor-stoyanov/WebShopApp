@@ -5,24 +5,32 @@ using System.Text;
 using System.Threading.Tasks;
 
 using WebShopApp.Infrastructure.Contracts;
+using WebShopApp.Infrastructure.Data;
+using WebShopApp.Infrastructure_.Data.Entities;
 
 namespace WebShopApp.Infrastructure.Services
 {
-    public class BrandService:IBrandService
+    public class BrandService : IBrandService
     {
-private readonly ApplicationDbContext _context;
+        private readonly ApplicationDbContext _context;
         public BrandService(ApplicationDbContext context)
         {
-            _context context; 
+            _context = context;
         }
-    public Brand GetBrandById(int brandId)
-return context.Brands.Find(brandId);
-public List<Brand> GetBrands()
-List<Brand> brands = context.Brands.ToList();
-return brands;
-public List<Product> GetProductsByBrand(int brandId)
-return context.Products
-Where(x => x.BrandId == brandId)
-.ToList();
-}
+        public Brand GetBrandById(int brandId)
+        {
+            return _context.Brands.Find(brandId);
+        }
+        public List<Brand> GetBrands()
+        {
+            List<Brand> brands = _context.Brands.ToList();
+            return brands;
+        }
+        public List<Product> GetProductsByBrand(int brandId)
+        {
+            return _context.Products
+            .Where(x => x.BrandId == brandId)
+            .ToList();
+        }
+    }
 }
