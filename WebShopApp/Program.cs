@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using WebShopApp.Infrastructure.Data;
+using WebShopApp.Infrastructure_.Data.Entities;
+using WebShopApp.Infrastructure_.Data.Infrastructure;
 
 namespace WebShopApp
 {
@@ -16,7 +18,7 @@ namespace WebShopApp
                 options.UseSqlServer(connectionString));
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-            builder.Services.AddDefaultIdentity<IdentityUser>(options =>
+            builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
             {
 
                 options.SignIn.RequireConfirmedAccount = false;
@@ -26,12 +28,12 @@ namespace WebShopApp
                 options.Password.RequireNonAlphanumeric = false;
                 options.Password.RequiredLength = 5;
             })
-
+                .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             builder.Services.AddControllersWithViews();
 
             var app = builder.Build();
-
+            app.PrepareDatabase();
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {

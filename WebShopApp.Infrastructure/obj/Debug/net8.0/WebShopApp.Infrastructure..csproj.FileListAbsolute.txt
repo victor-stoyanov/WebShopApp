@@ -12,3 +12,4 @@ C:\Users\Student\WebShopApp\WebShopApp.Infrastructure\obj\Debug\net8.0\refint\We
 C:\Users\Student\WebShopApp\WebShopApp.Infrastructure\obj\Debug\net8.0\WebShopApp.Infrastructure..pdb
 C:\Users\Student\WebShopApp\WebShopApp.Infrastructure\obj\Debug\net8.0\WebShopApp.Infrastructure..genruntimeconfig.cache
 C:\Users\Student\WebShopApp\WebShopApp.Infrastructure\obj\Debug\net8.0\ref\WebShopApp.Infrastructure..dll
+C:\Users\Student\WebShopApp\WebShopApp.Infrastructure\obj\Debug\net8.0\WebShopApp.Infrastructure..sourcelink.json
