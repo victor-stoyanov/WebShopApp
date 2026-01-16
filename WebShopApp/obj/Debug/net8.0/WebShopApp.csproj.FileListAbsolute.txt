@@ -291,3 +291,5 @@ C:\Users\Student\WebShopApp\WebShopApp\bin\Debug\net8.0\runtimes\win-x64\native\
 C:\Users\Student\WebShopApp\WebShopApp\bin\Debug\net8.0\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\Student\WebShopApp\WebShopApp\bin\Debug\net8.0\WebShopApp.Core.dll
 C:\Users\Student\WebShopApp\WebShopApp\bin\Debug\net8.0\WebShopApp.Core.pdb
+C:\Users\Student\WebShopApp\WebShopApp\bin\Debug\net8.0\Castle.Core.dll
+C:\Users\Student\WebShopApp\WebShopApp\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Proxies.dll
